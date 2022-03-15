@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Details of comments analysis">
+	<meta name="author" content="Group 2">
+	<title>Details</title>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='try_1_style.css') }}">
+	<!--<base href = "http://SeARCH.ru/pages">-->
+</head>
+
+<body style="margin:0;">
+	<div class="content">
+		
+		<p class = "Header"> Results</p>
+
+		<div class="Results">
+			<div class="statss">
+				<p>Query: "{{ res['query'] }}"</p>
+			</div>
+			
+			<!-- <h2>Список новостных постов</h2> -->
+			<br>
+			{% if res['news_count'] > 0 %}
+			<table id="myTable">
+				<tr>
+					<th>Lang. 1</th>
+					<th>Text 1</th>
+					<th>Lang. 2</th>
+					<th>Text 2</th> 
+					<th>Distance score</th>
+				</tr>
+				{% for news in res['news']%}
+				<tr>
+					<td><div style="height:200px; overflow:scroll;">{{ lang_dict[news["lang1"]] }}</div></td>
+					<td><div style="height:200px; overflow:scroll;">{{ news["content1"] }}</div></td>
+					<td><div style="height:200px; overflow:scroll;">{{ lang_dict[news["lang2"]] }}</div></td>
+					<td><div style="height:200px; overflow:scroll;">{{ news["content2"] }}</div></td> 
+					<td><div style="height:200px; overflow:scroll;">{{ news["distance"] }}</div></td>
+				</tr>
+				{% endfor %} 
+				</table>
+				{% else %}
+					<p class="no_articles">Ничего не найдено
+					<br>
+					</p>
+				{% endif %}
+				</div>
+		</div>
+
+		<div class = "footer">
+			Skolkovo Institute of Science and Technology. 2022
+		</div>
+	</div>
+</body>
+
+
+
+</html>

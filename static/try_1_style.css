@@ -1,0 +1,140 @@
+@font-face {
+  font-family: Baloo;
+  src: url("../static/Baloo2-Regular.ttf");
+}
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+body {
+  margin: 0;
+  background: url("../static/page1/SVG/background1.svg") no-repeat center fixed;
+  width: 100%;
+  background-size: cover;
+  border: 0px;
+}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	line-height: 1;
+	font-size: 16px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+  font-family: Baloo;
+}
+
+
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+img{vertical-align: top;}
+
+/*--------------------*/
+
+
+.statss {
+	/* width:92%; */
+	font-size: 15px;
+	color: #ffffff;
+	text-align: center;
+}
+
+
+
+.Headliner {
+	background: #0054a8;
+	color: white;
+
+}
+
+
+
+.Headliner * {
+	margin: 5px;
+}
+
+.Header {
+  padding-top: 30px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 50px;
+}
+
+
+
+.Results {
+	padding: 30px 100px;
+}
+
+
+.Results * {
+	margin: 0px 0px 15px 0px;
+}
+
+
+tr {
+	width:92%;
+	font-size: 15px;
+	color: #ffffff;
+  vertical-align: top;
+}
+
+
+#myTable{
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+
+#myTable td{
+  border: 2px solid #ddd;
+  padding: 8px;
+  padding-bottom: 0px;
+  /* overflow-y: scroll; */
+}
+
+#myTable td:nth-child(even){
+  width: 400px;
+}
+
+#myTable th{
+  padding: 12px;
+  text-align: left;
+  /* background-color: #0054a8; */
+  border: 2px solid #ddd;
+  color: white;
+}
+
+.footer {
+  /* position: fixed; */
+  bottom: 0px;
+  width: 100%;
+  background-color: gray;
+  opacity: 50%;
+  color: white;
+  text-align: center;
+}
+
+
+
+
+

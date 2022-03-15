@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename="style_search.css") }}">
+        <meta charset="utf-8">
+        <title>Page Title</title>
+    </head>
+    <body>
+    <div id = "parcing_text" style="display:none;">
+        <text> Parcing and comparing the news...</text>
+        <br>
+        <br>
+        <br>
+    </div>
+    <div id="loader" style="display:none;" class="animate-bottom" ></div>
+    <content id="myDiv">
+        {% block content %}
+
+
+            <text id = Header> Text Similarity Demo</text>
+            <br>
+
+                
+            <form class="search_area"  method="post">
+
+                <input type="text" name="search_text" id="search_text" placeholder="search query" required>
+                <input type="image" name="submit" src="../static/page1/SVG/Enter1.svg"
+                    value="Поиск" onclick="myFunction();" >
+            </form>
+
+            <div class = "footer">
+                Skolkovo Institute of Science and Technology. 2022
+            </div>
+
+        {% endblock %}
+    </content>
+
+
+	<script>
+		var myVar;
+		
+		function myFunction() {
+				showLoading()
+			// myVar = setTimeout(showPage, 3000);
+		}
+		
+		function showLoading() {
+			document.getElementById("loader").style.display = "block";
+			document.getElementById("myDiv").style.display = "none";
+            document.getElementById("parcing_text").style.display = "block";
+		}
+	</script>
+
+    </body>
+</html>
